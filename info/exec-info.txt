@@ -1,5 +1,0 @@
-markdownlint README.md 
-
-//enable html 1
-//https://github.com/updownpress/markdown-lint/blob/master/rules/033-no-inline-html.md
-markdownlint --disable MD033 -- README.md 
