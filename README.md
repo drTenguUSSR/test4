@@ -2,6 +2,9 @@
 
 только для экспериментов. комитты нерегулярно будут squash-иться
 
+содержимое папки /docs опубликовано как
+[https://drtenguussr.github.io/test4/](https://drtenguussr.github.io/test4/)
+
 ## полезная информация
 
 [markDown информация cookbook-markdown.md](../../../drTenguUSSR/blob/main/cookbook-markdown.md)
