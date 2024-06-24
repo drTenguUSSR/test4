@@ -1,0 +1,7 @@
+orig:
+mvn archetype:generate   -DinteractiveMode=false   -DarchetypeGroupId=org.openjdk.jmh   -DarchetypeArtifactId=jmh-java-benchmark-archetype   -DgroupId=org.sample   -DartifactId=test   -Dversion=1.0
+
+upd-01,err
+mvn archetype:generate   -DinteractiveMode=false   -DarchetypeGroupId=mil.teng   -DarchetypeArtifactId=jmh-java-benchmark-archetype   -DgroupId=demo.jmh.sample   -DartifactId=test   -Dversion=1.0
+upd-02
+mvn archetype:generate   -DinteractiveMode=false   -DarchetypeGroupId=org.openjdk.jmh   -DarchetypeArtifactId=jmh-java-benchmark-archetype   -DgroupId=mil.teng.jmh   -DartifactId=demo.jmh.sample  -Dversion=1.0

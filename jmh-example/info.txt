@@ -1,0 +1,5 @@
+https://github.com/openjdk/jmh/blob/master/README.md
+https://github.com/openjdk/jmh/tree/master/jmh-samples/src/main/java/org/openjdk/jmh/samples
+	$ mvn clean verify
+	$java -jar target/benchmarks.jar
+		Run with -h to see the command line options available.
