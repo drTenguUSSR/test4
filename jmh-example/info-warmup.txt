@@ -1,0 +1,53 @@
+# Warmup: 2 iterations, 1000 ms each
+# Measurement: 2 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+---------
+    @Warmup(iterations = 2, time = 1000, timeUnit = TimeUnit.MILLISECONDS)
+    @Measurement(iterations = 2, batchSize = 1)
+    @Fork(value = 2)
+# Benchmark: mil.teng.jmh.ExampleJmh.sleep300msA
+fork 1 of 2
+warm-1: 4x call,  one-run=300ms
+warm-2: 4x call,  one-run=300ms
+iter-1: 34x call, one-run=301,192 ms/op
+iter-2: 34x call, one-run=300,817 ms/op
+fork 2 of 2
+warm-1: 4x call,  one-run=300,803 ms/op
+warm-2: 4x call,  one-run=301,085 ms/op
+iter-1: 34x call, one-run=301,006 ms/op
+iter-2: 34x call, one-run=300,969 ms/op
+---------
+
+Result "mil.teng.jmh.ExampleJmh.sleep300msA":
+  300,996 ±(99.9%) 0,995 ms/op [Average]
+  (min, avg, max) = (300,817, 300,996, 301,192), stdev = 0,154
+  CI (99.9%): [300,001, 301,991] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:00:46
+
+Benchmark               Mode  Cnt    Score   Error  Units
+ExampleJmh.sleep300msA  avgt    4  300,996 ± 0,995  ms/op
+
+Process finished with exit code 0
+=====================================================================
+@Warmup(iterations = 8, time = 1000, timeUnit = TimeUnit.MILLISECONDS)
+warm-1, x4 call
+warm-2, x4 call
+warm-3, x4 call
+warm-4, x4 call
+warm-5, x4 call
+warm-6, x4 call
+warm-7, x4 call
+warm-8, x4 call
+=====================================================================
+@Warmup(iterations = 2, time = 4000, timeUnit = TimeUnit.MILLISECONDS)
+warm-1, x14 call, one-run=301,541 ms/op, time=3 921ms
+warm-2, x14 call, one-run=301,322 ms/op, time=4 226ms
+=====================================================================
+@Warmup(iterations = 2, time = 14000, timeUnit = TimeUnit.MILLISECONDS)
+warm-1, x47 call, one-run=301,637 ms/op, time=13 876
+warm-2, x47 call, one-run=301,336 ms/op, time=13 861
+=====================================================================

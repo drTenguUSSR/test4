@@ -1,0 +1,47 @@
+@State(Scope.Benchmark)
+public static class XState {
+	private long initOffset;
+
+	@Param({ "100", "200" })
+	public int iterations;
+}
+---------------------------------------
+# Parameters: (iterations = 100)
+# Fork: 1 of 2
+Iteration   1: x20, 301,098 ms/op
+Iteration   2: x20, 301,534 ms/op
+
+# Fork: 2 of 2
+Iteration   1: x20, 301,366 ms/op
+Iteration   2: x20, 301,808 ms/op
+
+Result "mil.teng.jmh.BenchParam.simple":
+  301,451 ±(99.9%) 1,925 ms/op [Average]
+  (min, avg, max) = (301,098, 301,451, 301,808), stdev = 0,298
+  CI (99.9%): [299,526, 303,376] (assumes normal distribution)
+---------------------------------------
+# Parameters: (iterations = 200)
+
+# Run progress: 50,00% complete, ETA 00:00:30
+# Fork: 1 of 2
+Iteration   1: x20, 301,515 ms/op
+Iteration   2: x20, 301,340 ms/op
+
+# Fork: 2 of 2
+Iteration   1: x20, 301,409 ms/op
+Iteration   2: x20, 301,326 ms/op
+
+Result "mil.teng.jmh.BenchParam.simple":
+  301,397 ±(99.9%) 0,559 ms/op [Average]
+  (min, avg, max) = (301,326, 301,397, 301,515), stdev = 0,087
+  CI (99.9%): [300,838, 301,957] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:01:00
+
+
+Benchmark          (iterations)  Mode  Cnt    Score   Error  Units
+BenchParam.simple           100  avgt    4  301,451 ± 1,925  ms/op
+BenchParam.simple           200  avgt    4  301,397 ± 0,559  ms/op
+
+Process finished with exit code 0

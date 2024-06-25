@@ -1,0 +1,26 @@
+@Measurement(iterations = 2, batchSize = 3)
+Measurement: 2 iterations, 10 s each, 3 calls per op
+iter-1. 34x call; 904,375 ms/op; time=9 948
+iter-1. 34x call; 904,050 ms/op; time=9 944
+===============================================
+@Measurement(iterations = 2, batchSize = 1)
+Measurement: 2 iterations, 10 s each
+//batch=1 default
+f1-iter-1. x34 call; 301,373 ms/op; time=9 945
+f1-iter-2. x34 call; 301,387 ms/op; time=9 947
+f2-iter-1. x34 call; 301,343 ms/op; time=9 945
+f2-iter-2. x34 call; 301,502 ms/op; time=9 951
+=============================================
+@Measurement(iterations = 2, batchSize = 1, time = 6, timeUnit = TimeUnit.SECONDS)
+Measurement: 2 iterations, 6 s each
+f1-iter1: x20; 301,284 ms/op; time=5 725
+f1-iter2: x20; 301,541 ms/op; time=5 729
+f2-iter1: x20; 301,250 ms/op; time=5 724
+f2-iter2: x20; 301,409 ms/op; time=5 728
+
+Benchmark               Mode  Cnt    Score   Error  Units
+ExampleJmh.sleep300msA  avgt    4  301,371 ± 0,857  ms/op
+=============================================
+??? @CompilerControl
+https://github.com/melix/jmh-gradle-example/blob/master/src/jmh/java/org/openjdk/jmh/samples/JMHSample_16_CompilerControl.java
+@CompilerControl(CompilerControl.Mode.DONT_INLINE)

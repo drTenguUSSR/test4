@@ -1,7 +1,3 @@
-/**
- * @author DrTengu, 2024/06
- */
-
 package mil.teng.jmh;
 
 import java.text.ParseException;
@@ -15,31 +11,27 @@ import org.openjdk.jmh.annotations.Level;
 import org.openjdk.jmh.annotations.Measurement;
 import org.openjdk.jmh.annotations.Mode;
 import org.openjdk.jmh.annotations.OutputTimeUnit;
+import org.openjdk.jmh.annotations.Param;
 import org.openjdk.jmh.annotations.Scope;
 import org.openjdk.jmh.annotations.Setup;
 import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.annotations.Warmup;
 
 /**
- * info:
- * https://jenkov.com/tutorials/java-performance/jmh.html
- * https://medium.com/@truongbui95/jmh-java-microbenchmark-harness-tests-in-java-applications-f607f00f536d
- *
- * fat-jar
- * https://stackoverflow.com/questions/16222748/building-a-fat-jar-using-maven
- *
- * using @Param
- * https://www.baeldung.com/java-microbenchmark-harness
+ * @author DrTengu, 2024/06
  */
 
 @BenchmarkMode(Mode.AverageTime)
 @Fork(value = 2)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @Warmup(iterations = 2, time = 1000, timeUnit = TimeUnit.MILLISECONDS)
-public class ExampleJmh {
+public class BenchParam {
     @State(Scope.Benchmark)
     public static class XState {
         private long initOffset;
+
+        @Param({ "100", "200" })
+        public int iterations;
 
         @Setup(Level.Trial)
         public void doInit() throws ParseException {
@@ -50,23 +42,15 @@ public class ExampleJmh {
             xlog("doInit:" + millis);
             this.initOffset = millis;
         }
-
     }
 
     @Benchmark
     @Measurement(iterations = 2, batchSize = 1, time = 6, timeUnit = TimeUnit.SECONDS)
-    public void sleep300msA(XState xstate) throws InterruptedException {
+    public void simple(XState xstate) throws InterruptedException {
         Thread.sleep(300);
         long now = System.currentTimeMillis();
-        xlog("sleep300msA. this=" + this.toString() + " delta=" + (now - xstate.initOffset) + " xstate=" + xstate);
-    }
-
-    //@Benchmark
-    @Measurement(iterations = 1, batchSize = 1, time = 100, timeUnit = TimeUnit.MILLISECONDS)
-    public void sleep50ms(XState xstate) throws InterruptedException {
-        Thread.sleep(50);
-        long now = System.currentTimeMillis();
-        xlog("ExampleJmh-dontRun. this=" + this.toString() + " xstate=" + xstate);
+        final int iter = xstate.iterations;
+        xlog("BenchParam-simple. delta=" + (now - xstate.initOffset) + " iter=" + iter);
     }
 
     public static void xlog(String msg) {
