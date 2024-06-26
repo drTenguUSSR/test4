@@ -32,7 +32,7 @@ import org.openjdk.jmh.infra.Blackhole;
 public class MusicSortTest {
     @Benchmark
     public void viaSteam(Blackhole blackhole, BenchParam param) throws InterruptedException {
-        final var resA = Utils.makeSortViaStream(param.allMusic);
+        final var resA = Utils.makeSortViaStreamGroup(param.allMusic);
         dumpInfo("viaSteam", resA);
         Thread.sleep(100);
         blackhole.consume(resA);
