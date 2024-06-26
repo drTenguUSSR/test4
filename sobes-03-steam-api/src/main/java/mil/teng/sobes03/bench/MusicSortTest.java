@@ -5,10 +5,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.StringJoiner;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
 import mil.teng.sobes03.music.Music;
+import mil.teng.sobes03.music.Utils;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Fork;
@@ -24,7 +23,6 @@ import org.openjdk.jmh.infra.Blackhole;
 
 /**
  * @author DrTengu, 2024/06
- * setup console encoding: File/Setting/Editor > General > Console (one drop-down)
  */
 @BenchmarkMode(Mode.AverageTime)
 @Fork(value = 2, jvmArgs = { "-Dfile.encoding=UTF-8", "-Xms2G", "-Xmx2G" })
@@ -34,9 +32,7 @@ import org.openjdk.jmh.infra.Blackhole;
 public class MusicSortTest {
     @Benchmark
     public void viaSteam(Blackhole blackhole, BenchParam param) throws InterruptedException {
-        final var musicList = param.allMusic;
-        final var resA = musicList.stream()
-                .collect(Collectors.groupingBy(Music::getAuthor, Collectors.mapping(Music::getName, Collectors.toSet())));
+        final var resA = Utils.makeSortViaStream(param.allMusic);
         dumpInfo("viaSteam", resA);
         Thread.sleep(100);
         blackhole.consume(resA);
@@ -51,19 +47,19 @@ public class MusicSortTest {
     //        blackhole.consume(recalcList);
     //    }
 
-    private Set<String> fx(Set<String> s1, Set<String> s2) {
+    private static Set<String> fx(Set<String> s1, Set<String> s2) {
         s1.addAll(s2);
         return s1;
     }
 
-    private Set<String> makeSet(String name) {
+    private static Set<String> makeSet(String name) {
         final HashSet<String> res = new HashSet<>();
         res.add(name);
         return res;
     }
 
-    private void dumpInfo(String prefix, Map<String, Set<String>> allData) {
-        xlog("dumpInfo(",prefix,")=[");
+    private static void dumpInfo(String prefix, Map<String, Set<String>> allData) {
+        xlog("dumpInfo(", prefix, ")=[");
         allData.forEach((datA, datB) -> xlog(datA + ": " + String.join(",", datB)));
         xlog("]");
     }
@@ -72,7 +68,7 @@ public class MusicSortTest {
     public void simple(Blackhole blackhole, BenchParam param) throws InterruptedException {
         Thread.sleep(500);
         long now = System.currentTimeMillis();
-        xlog("simple called. now=" + now);
+        xlog("simple called. now=", Long.toString(now));
         blackhole.consume(param.now + now);
     }
 
@@ -101,19 +97,20 @@ public class MusicSortTest {
             musicList.add(new Music("Моцарт", "взлет осени"));
             musicList.add(new Music("Шуберт", "Шуберт. тишина на зимата"));
 
-            xlog("setup: musicList.size=" + musicList.size());
+            xlog("setup: musicList.size=" , Integer.toString(musicList.size()));
             this.allMusic = musicList;
         }
     }
 
-    public static void xlog(String... msg) {
-        System.out.println(String.join(" ",msg));
+    private static void xlog(String... msg) {
+        System.out.println(String.join("", msg));
     }
 }
-/** sort-result
- Бах: Бах. silence of winter,Бах. the decline of summer,Бах. the arrival of spring,Бах. take off of autumn
- Бетховен: Бетховен. der Niedergang des Sommers,Бетховен. Abheben vom Herbst,Бетховен. die Ankunft des Frühlings,Бетховен. Stille des Winters
- Шуберт: Шуберт. тишина на зимата,Шуберт. залезът на лятото,Шуберт. пристигането на пролетта,Шуберт. излитане на есента
- Моцарт: упадок лета,приход весны,молчанье зимы,взлет осени
+/**
+ * sort-result
+ * Бах: Бах. silence of winter,Бах. the decline of summer,Бах. the arrival of spring,Бах. take off of autumn
+ * Бетховен: Бетховен. der Niedergang des Sommers,Бетховен. Abheben vom Herbst,Бетховен. die Ankunft des Frühlings,Бетховен. Stille des Winters
+ * Шуберт: Шуберт. тишина на зимата,Шуберт. залезът на лятото,Шуберт. пристигането на пролетта,Шуберт. излитане на есента
+ * Моцарт: упадок лета,приход весны,молчанье зимы,взлет осени
  */
 

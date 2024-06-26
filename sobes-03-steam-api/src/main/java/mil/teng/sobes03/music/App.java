@@ -26,7 +26,7 @@ public class App {
         xlog("]");
 
 
-        final Map<String, Set<String>> resB = new HashMap<String, Set<String>>();
+        final Map<String, Set<String>> resB = new HashMap<>();
         musicList.forEach(music -> {
             final Set<String> names = resB.get(music.getAuthor());
             if (names == null) {
