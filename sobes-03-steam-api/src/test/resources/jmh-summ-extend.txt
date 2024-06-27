@@ -1,0 +1,21 @@
+batchSize - увеличивает продолжительность итерации, путем повторения вызовов
+    результат - среднее время для итерации batchSize=N увеличивается в N раз
+------------
+вывод доп. информации при попытке запуска теста из консоли с указанием неподходящих классов/методов
+    java -jar target/benchmarks.jar -jvmArgs "-Dfile.encoding=cp866" -v extra ".*MusicA4M4SortWithPrintTest.viaSteam2$"
+------------------------------------------------------------------------------------------
+время обработки 1 вызова метода= 100ms.
+
+@Warmup(iterations = 1, time = 280, timeUnit = TimeUnit.MILLISECONDS)
+    в рамках итерации 3 вызова
+@Measurement(iterations = 1, batchSize = 1, time = 280, timeUnit = TimeUnit.MILLISECONDS)
+    в рамках итерации 3 вызова
+    report=100,932; iter-w=102,014 ms/op;iter-1=100,932 ms/op
+@Measurement(iterations = 1, batchSize = 1, time = 800, timeUnit = TimeUnit.MILLISECONDS)
+    в рамках итерации 8 вызов
+    report=101,161; iter-w=102,335 ms/op;iter-1=101,161 ms/op
+@Measurement(iterations = 1, batchSize = 2, time = 800, timeUnit = TimeUnit.MILLISECONDS)
+    в рамках итерации 8 вызов
+    report=201,719;iter-w=102,319 ms/op;iter-1=201,719 ms/op
+------------------------------------------------------------------------------------------
+

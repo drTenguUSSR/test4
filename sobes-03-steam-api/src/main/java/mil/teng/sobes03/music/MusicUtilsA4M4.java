@@ -28,6 +28,7 @@ public class MusicUtilsA4M4 {
         musicList.add(new Music(Info.A4, Info.A4_3));
         musicList.add(new Music(Info.A1, Info.A1_3));
         musicList.add(new Music(Info.A4, Info.A4_4));
+        musicList.add(new Music(Info.A2, Info.A2_6));
         return musicList;
     }
 
@@ -53,15 +54,16 @@ public class MusicUtilsA4M4 {
         public static final String A2_3 = "Бах-3. take off of autumn";
         public static final String A2_4 = "Бах-4. silence of winter";
         public static final String A2_5 = "Бах-5. unexpected one";
+        public static final String A2_6 = "Бах-6. expected Two";
 
         public static final Set<String> musNameA2 = Set.of(MusicUtilsA4M4.Info.A2_1, MusicUtilsA4M4.Info.A2_2, MusicUtilsA4M4.Info.A2_3,
-                MusicUtilsA4M4.Info.A2_4,MusicUtilsA4M4.Info.A2_5);
+                MusicUtilsA4M4.Info.A2_4,MusicUtilsA4M4.Info.A2_5,MusicUtilsA4M4.Info.A2_6);
 
         public static final String A3_1 = "Бетховен-1. die Ankunft des Frühlings";
         public static final String A3_2 = "Бетховен-2. der Niedergang des Sommers";
         public static final String A3_3 = "Бетховен-3. Abheben vom Herbst";
         public static final String A3_4 = "Бетховен-4. Stille des Winters";
-        public static final String A3_5 = "Бетховен-5. unexpected two";
+        public static final String A3_5 = "Бетховен-5. unexpected three";
 
         public static final Set<String> musNameA3 = Set.of(MusicUtilsA4M4.Info.A3_1, MusicUtilsA4M4.Info.A3_2, MusicUtilsA4M4.Info.A3_3,
                 MusicUtilsA4M4.Info.A3_4,MusicUtilsA4M4.Info.A3_5);

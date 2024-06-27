@@ -31,7 +31,7 @@ public class Utils {
      * @param srcMusic
      * @return
      */
-    public static Map<String, Set<String>> makeSortViaEachMapA(ArrayList<Music> srcMusic) {
+    public static Map<String, Set<String>> makeSortViaEachMapA(List<Music> srcMusic) {
         final Map<String, Set<String>> resB = new HashMap<>();
         srcMusic.forEach(music -> {
             final Set<String> names = resB.get(music.getAuthor());
@@ -52,7 +52,7 @@ public class Utils {
      * @param srcMusic
      * @return
      */
-    public static Map<String, Set<String>> makeSortViaEachMapB(ArrayList<Music> srcMusic) {
+    public static Map<String, Set<String>> makeSortViaEachMapB(List<Music> srcMusic) {
         final Map<String, Set<String>> resB = new HashMap<>();
         srcMusic.forEach(music -> {
             //TODO: check if use "map.merge"
