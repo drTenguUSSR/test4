@@ -69,8 +69,8 @@ public class ExampleJmh {
         xlog("ExampleJmh-dontRun. this=" + this.toString() + " xstate=" + xstate);
     }
 
-    public static void xlog(String msg) {
-        System.out.println(msg);
+    private static void xlog(String... msg) {
+        System.out.println(String.join("", msg));
     }
 
 }

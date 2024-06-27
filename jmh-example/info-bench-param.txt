@@ -1,47 +1,180 @@
-@State(Scope.Benchmark)
-public static class XState {
-	private long initOffset;
+C:\SpecTools\jdk-17.0.10x64\bin\java.exe "-javaagent:D:\Program Files\JetBrains\IntelliJ-IDEA-CE\lib\idea_rt.jar=45882:D:\Program Files\JetBrains\IntelliJ-IDEA-CE\bin" -Dfile.encoding=UTF-8 -classpath D:\MyDocsTeng-workDoc\github-test4\jmh-example\target\classes;D:\MyDocs-Maven-Repo1\org\openjdk\jmh\jmh-core\1.37\jmh-core-1.37.jar;D:\MyDocs-Maven-Repo1\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;D:\MyDocs-Maven-Repo1\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar org.openjdk.jmh.Main "mil.teng.jmh.BenchParam.*"
+# JMH version: 1.37
+# VM version: JDK 17.0.10, Java HotSpot(TM) 64-Bit Server VM, 17.0.10+11-LTS-240
+# VM invoker: C:\SpecTools\jdk-17.0.10x64\bin\java.exe
+# VM options: -javaagent:D:\Program Files\JetBrains\IntelliJ-IDEA-CE\lib\idea_rt.jar=45882:D:\Program Files\JetBrains\IntelliJ-IDEA-CE\bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 500 ms each
+# Measurement: 2 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: mil.teng.jmh.BenchParam.simple
+# Parameters: (iterations = 3)
 
-	@Param({ "100", "200" })
-	public int iterations;
-}
----------------------------------------
-# Parameters: (iterations = 100)
+# Run progress: 0,00% complete, ETA 00:00:08
 # Fork: 1 of 2
-Iteration   1: x20, 301,098 ms/op
-Iteration   2: x20, 301,534 ms/op
+# Warmup Iteration   1: BenchParamCtor called
+XStateCtor called. iterations=0 uuid=297cc3f1
+XStateInit: timeBaseOffset=1719520800000 iter=3 uuid=297cc3f1 randString.size=3 randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5041998 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5042099 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5042200 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5042301 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5042402 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+100,767 ms/op
+# Warmup Iteration   2: BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5042509 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5042609 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5042710 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5042812 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5042913 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+100,949 ms/op
+Iteration   1: BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5043014 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5043114 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5043215 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5043316 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5043418 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+101,009 ms/op
+Iteration   2: BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5043521 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5043622 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5043724 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5043827 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@5c4d5656 delta=5043929 iter=3 x.uuid=297cc3f1 x.randString.size=3 x.randString:[it0-30684d74, it1-7e56f261, it2-66778e7f]
+101,783 ms/op
 
+# Run progress: 25,00% complete, ETA 00:00:08
 # Fork: 2 of 2
-Iteration   1: x20, 301,366 ms/op
-Iteration   2: x20, 301,808 ms/op
+# Warmup Iteration   1: BenchParamCtor called
+XStateCtor called. iterations=0 uuid=1d7f2b29
+XStateInit: timeBaseOffset=1719520800000 iter=3 uuid=1d7f2b29 randString.size=3 randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5044613 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5044714 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5044815 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5044916 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5045018 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+101,099 ms/op
+# Warmup Iteration   2: BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5045125 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5045228 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5045329 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5045431 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5045531 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+101,386 ms/op
+Iteration   1: BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5045632 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5045733 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5045833 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5045935 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5046036 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+100,913 ms/op
+Iteration   2: BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5046138 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5046240 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5046341 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5046444 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5046545 iter=3 x.uuid=1d7f2b29 x.randString.size=3 x.randString:[it0-7b37cd70, it1-6481299d, it2-16a067e1]
+101,575 ms/op
+
 
 Result "mil.teng.jmh.BenchParam.simple":
-  301,451 ±(99.9%) 1,925 ms/op [Average]
-  (min, avg, max) = (301,098, 301,451, 301,808), stdev = 0,298
-  CI (99.9%): [299,526, 303,376] (assumes normal distribution)
----------------------------------------
-# Parameters: (iterations = 200)
+  101,320 ±(99.9%) 2,745 ms/op [Average]
+  (min, avg, max) = (100,913, 101,320, 101,783), stdev = 0,425
+  CI (99.9%): [98,575, 104,065] (assumes normal distribution)
 
-# Run progress: 50,00% complete, ETA 00:00:30
+
+# JMH version: 1.37
+# VM version: JDK 17.0.10, Java HotSpot(TM) 64-Bit Server VM, 17.0.10+11-LTS-240
+# VM invoker: C:\SpecTools\jdk-17.0.10x64\bin\java.exe
+# VM options: -javaagent:D:\Program Files\JetBrains\IntelliJ-IDEA-CE\lib\idea_rt.jar=45882:D:\Program Files\JetBrains\IntelliJ-IDEA-CE\bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 500 ms each
+# Measurement: 2 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: mil.teng.jmh.BenchParam.simple
+# Parameters: (iterations = 6)
+
+# Run progress: 50,00% complete, ETA 00:00:05
 # Fork: 1 of 2
-Iteration   1: x20, 301,515 ms/op
-Iteration   2: x20, 301,340 ms/op
+# Warmup Iteration   1: BenchParamCtor called
+XStateCtor called. iterations=0 uuid=662d781e
+XStateInit: timeBaseOffset=1719520800000 iter=6 uuid=662d781e randString.size=6 randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5047257 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5047359 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5047461 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5047561 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5047662 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+101,130 ms/op
+# Warmup Iteration   2: BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5047770 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5047871 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5047972 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5048073 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5048174 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+101,088 ms/op
+Iteration   1: BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5048274 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5048376 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5048478 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5048578 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5048680 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+101,227 ms/op
+Iteration   2: BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5048782 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5048883 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5048984 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5049085 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@775c3a delta=5049185 iter=6 x.uuid=662d781e x.randString.size=6 x.randString:[it0-4b9c0d2a, it1-78972257, it2-13298ba4, it3-4f56d342, it4-1b95ca4, it5-7c9f4ed7]
+100,734 ms/op
 
+# Run progress: 75,00% complete, ETA 00:00:02
 # Fork: 2 of 2
-Iteration   1: x20, 301,409 ms/op
-Iteration   2: x20, 301,326 ms/op
+# Warmup Iteration   1: BenchParamCtor called
+XStateCtor called. iterations=0 uuid=679b472b
+XStateInit: timeBaseOffset=1719520800000 iter=6 uuid=679b472b randString.size=6 randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5049871 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5049972 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5050072 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5050174 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5050274 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+100,861 ms/op
+# Warmup Iteration   2: BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5050381 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5050483 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5050583 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5050683 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5050784 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+100,631 ms/op
+Iteration   1: BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5050886 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5050987 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5051088 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5051190 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5051292 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+101,585 ms/op
+Iteration   2: BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5051394 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5051494 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5051595 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5051695 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+BenchParamSimple. xstate=mil.teng.jmh.jmh_generated.BenchParam_XState_jmhType@6bb0e928 delta=5051796 iter=6 x.uuid=679b472b x.randString.size=6 x.randString:[it0-68195889, it1-61bb0087, it2-74bc195, it3-69e02ad4, it4-1296694c, it5-5b8e20ab]
+100,471 ms/op
+
 
 Result "mil.teng.jmh.BenchParam.simple":
-  301,397 ±(99.9%) 0,559 ms/op [Average]
-  (min, avg, max) = (301,326, 301,397, 301,515), stdev = 0,087
-  CI (99.9%): [300,838, 301,957] (assumes normal distribution)
+  101,005 ±(99.9%) 3,219 ms/op [Average]
+  (min, avg, max) = (100,471, 101,005, 101,585), stdev = 0,498
+  CI (99.9%): [97,786, 104,223] (assumes normal distribution)
 
 
-# Run complete. Total time: 00:01:00
+# Run complete. Total time: 00:00:10
 
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
 
 Benchmark          (iterations)  Mode  Cnt    Score   Error  Units
-BenchParam.simple           100  avgt    4  301,451 ± 1,925  ms/op
-BenchParam.simple           200  avgt    4  301,397 ± 0,559  ms/op
+BenchParam.simple             3  avgt    4  101,320 ± 2,745  ms/op
+BenchParam.simple             6  avgt    4  101,005 ± 3,219  ms/op
 
 Process finished with exit code 0
