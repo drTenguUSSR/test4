@@ -57,7 +57,7 @@ public class MusicUtilsA4M4 {
         public static final String A2_6 = "Бах-6. expected Two";
 
         public static final Set<String> musNameA2 = Set.of(MusicUtilsA4M4.Info.A2_1, MusicUtilsA4M4.Info.A2_2, MusicUtilsA4M4.Info.A2_3,
-                MusicUtilsA4M4.Info.A2_4,MusicUtilsA4M4.Info.A2_5,MusicUtilsA4M4.Info.A2_6);
+                MusicUtilsA4M4.Info.A2_4, MusicUtilsA4M4.Info.A2_5, MusicUtilsA4M4.Info.A2_6);
 
         public static final String A3_1 = "Бетховен-1. die Ankunft des Frühlings";
         public static final String A3_2 = "Бетховен-2. der Niedergang des Sommers";
@@ -66,7 +66,7 @@ public class MusicUtilsA4M4 {
         public static final String A3_5 = "Бетховен-5. unexpected three";
 
         public static final Set<String> musNameA3 = Set.of(MusicUtilsA4M4.Info.A3_1, MusicUtilsA4M4.Info.A3_2, MusicUtilsA4M4.Info.A3_3,
-                MusicUtilsA4M4.Info.A3_4,MusicUtilsA4M4.Info.A3_5);
+                MusicUtilsA4M4.Info.A3_4, MusicUtilsA4M4.Info.A3_5);
 
         public static final String A4_1 = "Шуберт-1. пристигането на пролетта";
         public static final String A4_2 = "Шуберт-2. залезът на лятото";

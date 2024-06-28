@@ -22,10 +22,6 @@ import org.openjdk.jmh.infra.Blackhole;
 
 /**
  * @author DrTengu, 2024/06
- * задание кодировки консоли вывода в параметрах метода-теста или класса-теста
- * @Fork(value = 2, jvmArgs = {"-Dfile.encoding=UTF-8","-Xms2G", "-Xmx2G"})
- * в edit configuration/VM options/ добавить
- *  "-Dfile.encoding=windows-1251"
  */
 @BenchmarkMode(Mode.AverageTime)
 @Fork(value = 1, jvmArgs = { "-Xms2G", "-Xmx2G" })

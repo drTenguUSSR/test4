@@ -29,25 +29,19 @@ public class UnitSortA4M4Test {
         Set<String> allMel;
         allMel = srcMusic.stream().filter(mus -> MusicUtilsA4M4.Info.A1.equals(mus.getAuthor())).map(mus -> mus.getName())
                 .collect(Collectors.toSet());
-        allMel.removeAll(List.of(MusicUtilsA4M4.Info.A1_1, MusicUtilsA4M4.Info.A1_2, MusicUtilsA4M4.Info.A1_3, MusicUtilsA4M4.Info.A1_4));
-        Assertions.assertEquals(0, allMel.size());
+        Assertions.assertEquals(MusicUtilsA4M4.Info.musNameA1,allMel);
 
         allMel = srcMusic.stream().filter(mus -> MusicUtilsA4M4.Info.A2.equals(mus.getAuthor())).map(mus -> mus.getName())
                 .collect(Collectors.toSet());
-        allMel.removeAll(List.of(MusicUtilsA4M4.Info.A2_1, MusicUtilsA4M4.Info.A2_2, MusicUtilsA4M4.Info.A2_3, MusicUtilsA4M4.Info.A2_4,
-                MusicUtilsA4M4.Info.A2_5,MusicUtilsA4M4.Info.A2_6));
-        Assertions.assertEquals(0, allMel.size());
+        Assertions.assertEquals(MusicUtilsA4M4.Info.musNameA2,allMel);
 
         allMel = srcMusic.stream().filter(mus -> MusicUtilsA4M4.Info.A3.equals(mus.getAuthor())).map(mus -> mus.getName())
                 .collect(Collectors.toSet());
-        allMel.removeAll(List.of(MusicUtilsA4M4.Info.A3_1, MusicUtilsA4M4.Info.A3_2, MusicUtilsA4M4.Info.A3_3, MusicUtilsA4M4.Info.A3_4,
-                MusicUtilsA4M4.Info.A3_5));
-        Assertions.assertEquals(0, allMel.size());
+        Assertions.assertEquals(MusicUtilsA4M4.Info.musNameA3,allMel);
 
         allMel = srcMusic.stream().filter(mus -> MusicUtilsA4M4.Info.A4.equals(mus.getAuthor())).map(mus -> mus.getName())
                 .collect(Collectors.toSet());
-        allMel.removeAll(List.of(MusicUtilsA4M4.Info.A4_1, MusicUtilsA4M4.Info.A4_2, MusicUtilsA4M4.Info.A4_3, MusicUtilsA4M4.Info.A4_4));
-        Assertions.assertEquals(0, allMel.size());
+        Assertions.assertEquals(MusicUtilsA4M4.Info.musNameA4,allMel);
     }
 
     @Test
@@ -87,24 +81,16 @@ public class UnitSortA4M4Test {
 
         Set<String> musList;
         musList = srcA.get(MusicUtilsA4M4.Info.A1);
-        Assertions.assertEquals(4, musList.size());
-        Assertions.assertEquals(0, musList.stream().filter(musName -> !MusicUtilsA4M4.Info.musNameA1.contains(musName)).count(),
-                "musList:" + musList);
+        Assertions.assertEquals(MusicUtilsA4M4.Info.musNameA1,musList);
 
         musList = srcA.get(MusicUtilsA4M4.Info.A2);
-        Assertions.assertEquals(6, musList.size(), "musList:" + musList);
-        Assertions.assertEquals(0, musList.stream().filter(musName -> !MusicUtilsA4M4.Info.musNameA2.contains(musName)).count(),
-                "musList:" + musList);
+        Assertions.assertEquals(MusicUtilsA4M4.Info.musNameA2,musList);
 
         musList = srcA.get(MusicUtilsA4M4.Info.A3);
-        Assertions.assertEquals(5, musList.size(), "musList:" + musList);
-        Assertions.assertEquals(0, musList.stream().filter(musName -> !MusicUtilsA4M4.Info.musNameA3.contains(musName)).count(),
-                "musList:" + musList);
+        Assertions.assertEquals(MusicUtilsA4M4.Info.musNameA3,musList);
 
         musList = srcA.get(MusicUtilsA4M4.Info.A4);
-        Assertions.assertEquals(4, musList.size(), "musList:" + musList);
-        Assertions.assertEquals(0, musList.stream().filter(musName -> !MusicUtilsA4M4.Info.musNameA4.contains(musName)).count(),
-                "musList:" + musList);
+        Assertions.assertEquals(MusicUtilsA4M4.Info.musNameA4,musList);
 
     }
 

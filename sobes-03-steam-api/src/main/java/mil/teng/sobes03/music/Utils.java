@@ -5,7 +5,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.Set;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 /**
@@ -61,11 +63,47 @@ public class Utils {
         return resB;
     }
 
+    //TODO: реализация алгоритма через for(i1=...) цикл
+    //TODO: реализовать сортировку с паралельным srtream (в отдельный тест?)
+
+    /**
+     * Генерация списка мелодий по указанным параметрам
+     * @param authorsCount - число авторов
+     * @param melodyCount - число мелодий. Автор выбирается случайно из списка авторов
+     *                    число мелодий конкретного автора определяется случайно
+     * @return список мелодий
+     */
+    public static List<Music> generateMusicList(int authorsCount,int melodyCount) {
+        Random rand = new Random();
+        List<String> authorList = new ArrayList<>(authorsCount);
+        List<Music> musicList = new ArrayList<>();
+
+        for (int i1 = 0; i1 < authorsCount; i1++) {
+            int n = rand.nextInt(99);
+            String author = String.format("auth-%03d", n);
+            authorList.add(author);
+        }
+
+        for (int i1 = 0; i1 < melodyCount; i1++) {
+            final String author = authorList.get(rand.nextInt(authorList.size()));
+            final Music mus = new Music(author, "mel-" + UUID.randomUUID().toString());
+            musicList.add(mus);
+        }
+        return musicList;
+    }
+    /**
+     * Перерасчет список мелодий в карту:
+     *  ключ - автор
+     *  значение - число мелодий автора
+     * @param musicList
+     * @return
+     */
     public static Map<String, Integer> musicRecalc(List<Music> musicList) {
         final Map<String, Integer> recalcList = new HashMap<>();
         musicList.forEach(mus -> recalcList.merge(mus.getAuthor(), 1, Integer::sum));
         return recalcList;
     }
+
 
     public static void dumpMap(Map<String, Set<String>> resA) {
         resA.forEach((key, val) -> xlog(key + "(" + val.size() + "): " + String.join("|", val)));

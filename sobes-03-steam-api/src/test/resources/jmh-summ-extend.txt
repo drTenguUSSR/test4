@@ -1,6 +1,22 @@
+поддержка русских букв в консоли вывода при работе тестов
+в win-консоли(cmd):
+      java -jar target/benchmarks.jar -jvmArgs "-Dfile.encoding=cp866" ".*DebugRusConsole"
+
+в IDEA:
+    открыть run configuration/edit configuration/modify options/Add VM options
+      "-Dfile.encoding=windows-1251"
+
+указание кодировки внутри кода теста:
+@Fork(value = 2, jvmArgs = {"-Dfile.encoding=UTF-8","-Xms2G", "-Xmx2G"})
+------------------------------------------------------------------------------------------
+отображение единиц времени тестов
+ TimeUnit.MILLISECONDS - ms/op =       10,670
+ TimeUnit.MICROSECONDS - us/op =    10729,639
+ TimeUnit.NANOSECONDS  - ns/op = 10757911,567
+------------------------------------------------------------------------------------------
 batchSize - увеличивает продолжительность итерации, путем повторения вызовов
     результат - среднее время для итерации batchSize=N увеличивается в N раз
-------------
+------------------------------------------------------------------------------------------
 вывод доп. информации при попытке запуска теста из консоли с указанием неподходящих классов/методов
     java -jar target/benchmarks.jar -jvmArgs "-Dfile.encoding=cp866" -v extra ".*MusicA4M4SortWithPrintTest.viaSteam2$"
 ------------------------------------------------------------------------------------------

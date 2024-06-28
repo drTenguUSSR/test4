@@ -2,4 +2,4 @@
 @rem java -jar benchmarks.jar -lrf
 @rem  -lrf	List machine-readable result formats, and exit.
 @rem  -lprof	List profilers, and exit.
-java -jar target/benchmarks.jar -o musicA4M4SortTest-hr.log -jvmArgs "-Dfile.encoding=UTF-8" ".*MusicA4M4SortTest"
+java -jar target/benchmarks.jar -o MusicLargeTest-hr.log -jvmArgs "-Dfile.encoding=UTF-8" ".*MusicLargeTest"

@@ -52,7 +52,7 @@ public class BenchParam {
 
         @Setup(Level.Trial)
         public void doInit() throws ParseException {
-            String myDate = "2024/06/27 23:40:00";
+            String myDate = "2024/06/29 01:00:00";
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             Date date = sdf.parse(myDate);
             this.timeBaseOffset = date.getTime();

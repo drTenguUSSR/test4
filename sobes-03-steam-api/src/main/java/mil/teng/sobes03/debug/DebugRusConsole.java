@@ -1,4 +1,4 @@
-package mil.teng.sobes03.bench;
+package mil.teng.sobes03.debug;
 
 import java.util.concurrent.TimeUnit;
 import org.openjdk.jmh.annotations.Benchmark;
@@ -11,11 +11,6 @@ import org.openjdk.jmh.annotations.Warmup;
 
 /**
  * @author DrTengu, 2024/06
- * запуск теста в win-консоли:
- *      java -jar target/benchmarks.jar -jvmArgs "-Dfile.encoding=cp866" ".*DebugRusConsole"
- * запуск теста в IDEA
- *      открыть run configuration/edit configuration
- *
  */
 
 @BenchmarkMode(Mode.AverageTime)
