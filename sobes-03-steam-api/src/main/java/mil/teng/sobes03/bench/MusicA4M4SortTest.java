@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import mil.teng.sobes03.music.Music;
 import mil.teng.sobes03.music.MusicUtilsA4M4;
-import mil.teng.sobes03.music.Utils;
+import mil.teng.sobes03.music.SortAlgorithms;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Fork;
@@ -29,19 +29,19 @@ import org.openjdk.jmh.infra.Blackhole;
 public class MusicA4M4SortTest {
     @Benchmark
     public void viaSteam(Blackhole blackhole, BenchParam param) {
-        final var resA = Utils.makeSortViaStreamGroup(param.allMusic);
+        final var resA = SortAlgorithms.makeSortViaStreamGroup(param.allMusic);
         blackhole.consume(resA);
     }
 
     @Benchmark
     public void viaEachMapA(Blackhole blackhole, BenchParam param) {
-        final var resA = Utils.makeSortViaEachMapA(param.allMusic);
+        final var resA = SortAlgorithms.makeSortViaEachMapA(param.allMusic);
         blackhole.consume(resA);
     }
 
     @Benchmark
     public void viaEachMapB(Blackhole blackhole, BenchParam param) {
-        final var resA = Utils.makeSortViaEachMapB(param.allMusic);
+        final var resA = SortAlgorithms.makeSortViaEachMapB(param.allMusic);
         blackhole.consume(resA);
     }
 

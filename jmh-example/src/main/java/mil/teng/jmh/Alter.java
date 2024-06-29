@@ -14,17 +14,17 @@ import org.openjdk.jmh.annotations.Warmup;
  */
 @BenchmarkMode(Mode.AverageTime)
 public class Alter {
-    private static final long timeOffset = 1719526289928L;
+    private static final  long TIME_OFFSET = 1719526289928L;
 
     @Benchmark
     @Warmup(iterations = 1, time = 300, timeUnit = TimeUnit.MILLISECONDS)
     @Measurement(iterations = 6, batchSize = 1, time = 2)
     @Fork(value = 3)
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
-    public void alter100a(ExampleJmh.XState xstate) throws InterruptedException {
-        long nowA = System.currentTimeMillis() - timeOffset;
+    public void alter100a() throws InterruptedException {
+        long nowA = System.currentTimeMillis() - TIME_OFFSET;
         Thread.sleep(260);
-        long nowB = System.currentTimeMillis() - timeOffset;
+        long nowB = System.currentTimeMillis() - TIME_OFFSET;
         xlog("alter100a. nowA=" + nowA + " nowB=" + nowB);
     }
 

@@ -34,4 +34,11 @@ batchSize - увеличивает продолжительность итера
     в рамках итерации 8 вызов
     report=201,719;iter-w=102,319 ms/op;iter-1=201,719 ms/op
 ------------------------------------------------------------------------------------------
-
+визуализация данных
+получение данных (формат json)
+	java -jar target/benchmarks.jar -jvmArgs "-Dfile.encoding=cp866" -rff "BenchParamMultiTest.result.json" -rf JSON -o "BenchParamMultiTest.result.log" ".*BenchParamMultiTest"
+визуализация online
+	https://jmh.morethan.io/
+или библиотека
+	https://github.com/jzillmann/jmh-visualizer
+------------------------------------------------------------------------------------------

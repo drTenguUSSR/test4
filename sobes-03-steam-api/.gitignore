@@ -7,6 +7,8 @@ target/
 /_local/
 /config/
 /logs/
+/*.result.csv
+/*.result.json
 
 
 ### STS ###

@@ -1,7 +1,6 @@
 package mil.teng.sobes03.music;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -47,7 +46,7 @@ public class UnitSortA4M4Test {
     @Test
     public void checkViaStreamGroup() {
         final ArrayList<Music> srcMusic = MusicUtilsA4M4.createList();
-        final Map<String, Set<String>> resA = Utils.makeSortViaStreamGroup(srcMusic);
+        final Map<String, Set<String>> resA = SortAlgorithms.makeSortViaStreamGroup(srcMusic);
         xlog("checkViaStreamGroup-resA:[");
         Utils.dumpMap(resA);
         xlog("]");
@@ -57,7 +56,7 @@ public class UnitSortA4M4Test {
     @Test
     public void checkViaEachMapA() {
         final ArrayList<Music> srcMusic = MusicUtilsA4M4.createList();
-        final Map<String, Set<String>> resA = Utils.makeSortViaEachMapA(srcMusic);
+        final Map<String, Set<String>> resA = SortAlgorithms.makeSortViaEachMapA(srcMusic);
         xlog("checkViaEachMapA-resA:[");
         Utils.dumpMap(resA);
         xlog("]");
@@ -67,7 +66,7 @@ public class UnitSortA4M4Test {
     @Test
     public void checkViaEachMapB() {
         final ArrayList<Music> srcMusic = MusicUtilsA4M4.createList();
-        final Map<String, Set<String>> resA = Utils.makeSortViaEachMapB(srcMusic);
+        final Map<String, Set<String>> resA = SortAlgorithms.makeSortViaEachMapB(srcMusic);
         xlog("checkViaEachMapB-resA:[");
         Utils.dumpMap(resA);
         xlog("]");

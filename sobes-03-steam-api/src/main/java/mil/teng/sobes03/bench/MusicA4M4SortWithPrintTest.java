@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import mil.teng.sobes03.music.Music;
 import mil.teng.sobes03.music.MusicUtilsA4M4;
-import mil.teng.sobes03.music.Utils;
+import mil.teng.sobes03.music.SortAlgorithms;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Fork;
@@ -31,7 +31,7 @@ import org.openjdk.jmh.infra.Blackhole;
 public class MusicA4M4SortWithPrintTest {
     @Benchmark
     public void viaSteam(Blackhole blackhole, BenchParam param) throws InterruptedException {
-        final var resA = Utils.makeSortViaStreamGroup(param.allMusic);
+        final var resA = SortAlgorithms.makeSortViaStreamGroup(param.allMusic);
         dumpInfo("viaSteam", resA);
         Thread.sleep(70);
         blackhole.consume(resA);

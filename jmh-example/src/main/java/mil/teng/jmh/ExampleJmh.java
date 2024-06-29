@@ -24,10 +24,10 @@ import org.openjdk.jmh.annotations.Warmup;
  * info:
  * https://jenkov.com/tutorials/java-performance/jmh.html
  * https://medium.com/@truongbui95/jmh-java-microbenchmark-harness-tests-in-java-applications-f607f00f536d
- *
+ * <p>
  * fat-jar
  * https://stackoverflow.com/questions/16222748/building-a-fat-jar-using-maven
- *
+ * <p>
  * using @Param
  * https://www.baeldung.com/java-microbenchmark-harness
  */
@@ -57,8 +57,16 @@ public class ExampleJmh {
     @Measurement(iterations = 2, batchSize = 1, time = 6, timeUnit = TimeUnit.SECONDS)
     public void sleep300msA(XState xstate) throws InterruptedException {
         Thread.sleep(300);
-        long now = System.currentTimeMillis();
-        xlog("sleep300msA. this=" + this.toString() + " delta=" + (now - xstate.initOffset) + " xstate=" + xstate);
+        long delta = System.currentTimeMillis() - xstate.initOffset;
+        xlog("sleep300msA. this=" + lastDot(this.toString()) + " delta=" + delta + " xstate=" + lastDot(xstate.toString()));
+    }
+
+    private String lastDot(String param) {
+        final int lastIndex = param.lastIndexOf('.');
+        if (lastIndex == -1) {
+            return param;
+        }
+        return param.substring(lastIndex+1);
     }
 
     //@Benchmark

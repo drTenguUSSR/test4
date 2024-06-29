@@ -12,7 +12,7 @@ public class GenerateMultiAuthMultiMus {
     public static void main(String[] args) {
         xlog("AppGen started");
         //final List<Music> musicList = Utils.generateMusicList(3, 25);
-        final List<Music> musicList = Utils.generateMusicList(30, 2500);
+        final List<Music> musicList = SortAlgorithms.generateMusicList(30, 2500);
 
         musicList.forEach(mus -> xlog("music: " + mus.getAuthor() + ", " + mus.getName()));
 
