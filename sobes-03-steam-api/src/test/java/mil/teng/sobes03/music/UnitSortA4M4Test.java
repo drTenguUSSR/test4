@@ -44,30 +44,50 @@ public class UnitSortA4M4Test {
     }
 
     @Test
-    public void checkViaStreamGroup() {
+    public void checkViaStreamGroupA() {
         final ArrayList<Music> srcMusic = MusicUtilsA4M4.createList();
-        final Map<String, Set<String>> resA = SortAlgorithms.makeSortViaStreamGroup(srcMusic);
-        xlog("checkViaStreamGroup-resA:[");
-        Utils.dumpMap(resA);
+        final Map<String, Set<String>> res = SortAlgorithms.makeSortViaStreamGroupA(srcMusic);
+        xlog("checkViaStreamGroupA-res:[");
+        Utils.dumpMap(res);
         xlog("]");
-        validateResult(resA);
+        validateResult(res);
+    }
+
+    @Test
+    public void checkViaStreamGroupB() {
+        final ArrayList<Music> srcMusic = MusicUtilsA4M4.createList();
+        final Map<String, Set<String>> res = SortAlgorithms.makeSortViaStreamGroupB(srcMusic);
+        xlog("checkViaStreamGroupB-res:[");
+        Utils.dumpMap(res);
+        xlog("]");
+        validateResult(res);
     }
 
     @Test
     public void checkViaEachMapA() {
         final ArrayList<Music> srcMusic = MusicUtilsA4M4.createList();
-        final Map<String, Set<String>> resA = SortAlgorithms.makeSortViaEachMapA(srcMusic);
-        xlog("checkViaEachMapA-resA:[");
-        Utils.dumpMap(resA);
+        final Map<String, Set<String>> res = SortAlgorithms.makeSortViaEachMapA(srcMusic);
+        xlog("checkViaEachMapA-res:[");
+        Utils.dumpMap(res);
         xlog("]");
-        validateResult(resA);
+        validateResult(res);
     }
 
     @Test
     public void checkViaEachMapB() {
         final ArrayList<Music> srcMusic = MusicUtilsA4M4.createList();
         final Map<String, Set<String>> resA = SortAlgorithms.makeSortViaEachMapB(srcMusic);
-        xlog("checkViaEachMapB-resA:[");
+        xlog("checkViaEachMapB-res:[");
+        Utils.dumpMap(resA);
+        xlog("]");
+        validateResult(resA);
+    }
+
+    @Test
+    public void checkViaForMap() {
+        final ArrayList<Music> srcMusic = MusicUtilsA4M4.createList();
+        final Map<String, Set<String>> resA = SortAlgorithms.makeSortViaForMap(srcMusic);
+        xlog("checkViaForMap-res:[");
         Utils.dumpMap(resA);
         xlog("]");
         validateResult(resA);

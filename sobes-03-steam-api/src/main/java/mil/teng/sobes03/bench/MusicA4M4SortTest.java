@@ -28,8 +28,14 @@ import org.openjdk.jmh.infra.Blackhole;
 @OutputTimeUnit(TimeUnit.MICROSECONDS)
 public class MusicA4M4SortTest {
     @Benchmark
-    public void viaSteam(Blackhole blackhole, BenchParam param) {
-        final var resA = SortAlgorithms.makeSortViaStreamGroup(param.allMusic);
+    public void viaStreamGroupA(Blackhole blackhole, BenchParam param) {
+        final var resA = SortAlgorithms.makeSortViaStreamGroupA(param.allMusic);
+        blackhole.consume(resA);
+    }
+
+    @Benchmark
+    public void viaStreamGroupB(Blackhole blackhole, BenchParam param) {
+        final var resA = SortAlgorithms.makeSortViaStreamGroupB(param.allMusic);
         blackhole.consume(resA);
     }
 
@@ -42,6 +48,12 @@ public class MusicA4M4SortTest {
     @Benchmark
     public void viaEachMapB(Blackhole blackhole, BenchParam param) {
         final var resA = SortAlgorithms.makeSortViaEachMapB(param.allMusic);
+        blackhole.consume(resA);
+    }
+
+    @Benchmark
+    public void viaForMap(Blackhole blackhole, BenchParam param) {
+        final var resA = SortAlgorithms.makeSortViaForMap(param.allMusic);
         blackhole.consume(resA);
     }
 

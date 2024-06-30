@@ -15,13 +15,25 @@ import java.util.stream.Collectors;
  */
 public class SortAlgorithms {
     /**
-     * обработка данных с помощью stream + group
+     * обработка данных с помощью stream(последовательный) + group
      *
      * @param musicList
      * @return
      */
-    public static Map<String, Set<String>> makeSortViaStreamGroup(List<Music> musicList) {
+    public static Map<String, Set<String>> makeSortViaStreamGroupA(List<Music> musicList) {
         final var resA = musicList.stream()
+                .collect(Collectors.groupingBy(Music::getAuthor, Collectors.mapping(Music::getName, Collectors.toSet())));
+        return resA;
+    }
+
+    /**
+     * обработка данных с помощью stream(паралельный) + group
+     *
+     * @param musicList
+     * @return
+     */
+    public static Map<String, Set<String>> makeSortViaStreamGroupB(List<Music> musicList) {
+        final var resA = musicList.stream().parallel()
                 .collect(Collectors.groupingBy(Music::getAuthor, Collectors.mapping(Music::getName, Collectors.toSet())));
         return resA;
     }
@@ -62,14 +74,33 @@ public class SortAlgorithms {
         return resB;
     }
 
+    public static Map<String, Set<String>> makeSortViaForMap(List<Music> srcMusic) {
+        final Map<String, Set<String>> resB = new HashMap<>();
+        final int max = srcMusic.size();
+        for (int i1 = 0; i1 < max; i1++) {
+            final Music music = srcMusic.get(i1);
+            final String auth = music.getAuthor();
+            final Set<String> names = resB.get(auth);
+            if (names == null) {
+                final Set<String> dat = new HashSet<>();
+                dat.add(music.getName());
+                resB.put(auth, dat);
+            } else {
+                names.add(music.getName());
+            }
+        }
+        return resB;
+    }
+
     /**
      * Генерация списка мелодий по указанным параметрам
+     *
      * @param authorsCount - число авторов
-     * @param melodyCount - число мелодий. Автор выбирается случайно из списка авторов
-     *                    число мелодий конкретного автора определяется случайно
+     * @param melodyCount  - число мелодий. Автор выбирается случайно из списка авторов
+     *                     число мелодий конкретного автора определяется случайно
      * @return список мелодий
      */
-    public static List<Music> generateMusicList(int authorsCount,int melodyCount) {
+    public static List<Music> generateMusicList(int authorsCount, int melodyCount) {
         Random rand = new Random();
         List<String> authorList = new ArrayList<>(authorsCount);
         List<Music> musicList = new ArrayList<>();
@@ -88,6 +119,4 @@ public class SortAlgorithms {
         return musicList;
     }
 
-    //TODO: реализация алгоритма через for(i1=...) цикл
-    //TODO: реализовать сортировку с паралельным srtream (в отдельный тест?)
 }

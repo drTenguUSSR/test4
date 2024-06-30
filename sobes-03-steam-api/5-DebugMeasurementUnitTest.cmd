@@ -1,1 +1,1 @@
-java -jar target/benchmarks.jar -jvmArgs "-Dfile.encoding=UTF-8" ".*DebugMeasurementUnitTest" >repo-txt.txt
+java -jar target/benchmarks.jar -jvmArgs "-Dfile.encoding=UTF-8" ".*DebugMeasurementUnitTest" >5-DebugMeasurementUnitTest.log

@@ -30,17 +30,43 @@ import org.openjdk.jmh.infra.Blackhole;
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 public class MusicA4M4SortWithPrintTest {
     @Benchmark
-    public void viaSteam(Blackhole blackhole, BenchParam param) throws InterruptedException {
-        final var resA = SortAlgorithms.makeSortViaStreamGroup(param.allMusic);
-        dumpInfo("viaSteam", resA);
+    public void viaStreamGroupA(Blackhole blackhole, BenchParam param) throws InterruptedException {
+        final var resA = SortAlgorithms.makeSortViaStreamGroupA(param.allMusic);
+        dumpInfo("viaSteamA", resA);
         Thread.sleep(70);
         blackhole.consume(resA);
     }
 
-    //@Benchmark
-    public void simple() throws InterruptedException {
-        xlog("simple: "+System.currentTimeMillis());
-        Thread.sleep(100);
+    @Benchmark
+    public void viaStreamGroupB(Blackhole blackhole, BenchParam param) throws InterruptedException {
+        final var resA = SortAlgorithms.makeSortViaStreamGroupB(param.allMusic);
+        dumpInfo("viaSteamB", resA);
+        Thread.sleep(70);
+        blackhole.consume(resA);
+    }
+
+    @Benchmark
+    public void viaEachMapA(Blackhole blackhole, BenchParam param) throws InterruptedException {
+        final var resA = SortAlgorithms.makeSortViaEachMapA(param.allMusic);
+        dumpInfo("viaEachMapA", resA);
+        Thread.sleep(70);
+        blackhole.consume(resA);
+    }
+
+    @Benchmark
+    public void viaEachMapB(Blackhole blackhole, BenchParam param) throws InterruptedException {
+        final var resA = SortAlgorithms.makeSortViaEachMapB(param.allMusic);
+        dumpInfo("viaEachMapB", resA);
+        Thread.sleep(70);
+        blackhole.consume(resA);
+    }
+
+    @Benchmark
+    public void viaForMap(Blackhole blackhole, BenchParam param) throws InterruptedException {
+        final var resA = SortAlgorithms.makeSortViaForMap(param.allMusic);
+        dumpInfo("viaForMap", resA);
+        Thread.sleep(70);
+        blackhole.consume(resA);
     }
 
     private static void dumpInfo(String prefix, Map<String, Set<String>> allData) {

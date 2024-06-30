@@ -1,0 +1,8 @@
+@BenchmarkMode(Mode.AverageTime)
+@Fork(value = 5, jvmArgs = { "-Xms6G", "-Xmx6G" })
+@Warmup(iterations = 7, time = 30, timeUnit = TimeUnit.SECONDS)
+@Measurement(iterations = 7, time = 30, timeUnit = TimeUnit.SECONDS)
+@OutputTimeUnit(TimeUnit.NANOSECONDS)
+
+@Param({ "200000" })
+public int maxMelody;

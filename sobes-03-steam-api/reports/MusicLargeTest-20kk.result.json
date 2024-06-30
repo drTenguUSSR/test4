@@ -1,0 +1,734 @@
+[
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "mil.teng.sobes03.bench.MusicLargeTest.viaEachMapA",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 5,
+        "jvm" : "C:\\SpecTools\\jdk-17.0.10x64\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8"
+        ],
+        "jdkVersion" : "17.0.10",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "17.0.10+11-LTS-240",
+        "warmupIterations" : 3,
+        "warmupTime" : "5 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "maxMelody" : "200"
+        },
+        "primaryMetric" : {
+            "score" : 3127.793338451652,
+            "scoreError" : 157.75549898614565,
+            "scoreConfidence" : [
+                2970.0378394655063,
+                3285.5488374377974
+            ],
+            "scorePercentiles" : {
+                "0.0" : 2900.6038745425985,
+                "50.0" : 3127.828376405415,
+                "90.0" : 3359.2337310108624,
+                "95.0" : 3408.7884452297785,
+                "99.0" : 3408.7884452297785,
+                "99.9" : 3408.7884452297785,
+                "99.99" : 3408.7884452297785,
+                "99.999" : 3408.7884452297785,
+                "99.9999" : 3408.7884452297785,
+                "100.0" : 3408.7884452297785
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    3254.8318720681414,
+                    3147.9385304515104,
+                    3207.705330062559
+                ],
+                [
+                    3063.687497166828,
+                    2938.190555029079,
+                    3127.828376405415
+                ],
+                [
+                    3408.7884452297785,
+                    3148.1576676191034,
+                    3326.1972548649182
+                ],
+                [
+                    2900.6038745425985,
+                    2958.8648428606252,
+                    3029.7147714954485
+                ],
+                [
+                    3021.5070789697056,
+                    3107.902876258503,
+                    3274.9811037505615
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "mil.teng.sobes03.bench.MusicLargeTest.viaEachMapA",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 5,
+        "jvm" : "C:\\SpecTools\\jdk-17.0.10x64\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8"
+        ],
+        "jdkVersion" : "17.0.10",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "17.0.10+11-LTS-240",
+        "warmupIterations" : 3,
+        "warmupTime" : "5 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "maxMelody" : "20000000"
+        },
+        "primaryMetric" : {
+            "score" : 5.093199736666667E9,
+            "scoreError" : 8.836859391858855E8,
+            "scoreConfidence" : [
+                4.2095137974807816E9,
+                5.976885675852552E9
+            ],
+            "scorePercentiles" : {
+                "0.0" : 4.10909375E9,
+                "50.0" : 5.084411E9,
+                "90.0" : 6.5113184E9,
+                "95.0" : 6.5526914E9,
+                "99.0" : 6.5526914E9,
+                "99.9" : 6.5526914E9,
+                "99.99" : 6.5526914E9,
+                "99.999" : 6.5526914E9,
+                "99.9999" : 6.5526914E9,
+                "100.0" : 6.5526914E9
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    4.13529225E9,
+                    4.27594995E9,
+                    4.10909375E9
+                ],
+                [
+                    4.1802062E9,
+                    5.1911533E9,
+                    5.5002926E9
+                ],
+                [
+                    5.084411E9,
+                    5.0804191E9,
+                    5.0030768E9
+                ],
+                [
+                    5.1741459E9,
+                    5.4362039E9,
+                    4.1452297E9
+                ],
+                [
+                    6.0460938E9,
+                    6.4837364E9,
+                    6.5526914E9
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "mil.teng.sobes03.bench.MusicLargeTest.viaEachMapB",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 5,
+        "jvm" : "C:\\SpecTools\\jdk-17.0.10x64\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8"
+        ],
+        "jdkVersion" : "17.0.10",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "17.0.10+11-LTS-240",
+        "warmupIterations" : 3,
+        "warmupTime" : "5 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "maxMelody" : "200"
+        },
+        "primaryMetric" : {
+            "score" : 3427.604359928083,
+            "scoreError" : 176.56366282637885,
+            "scoreConfidence" : [
+                3251.040697101704,
+                3604.1680227544616
+            ],
+            "scorePercentiles" : {
+                "0.0" : 3182.8634883088826,
+                "50.0" : 3472.5742212613395,
+                "90.0" : 3608.00662957972,
+                "95.0" : 3608.355034111531,
+                "99.0" : 3608.355034111531,
+                "99.9" : 3608.355034111531,
+                "99.99" : 3608.355034111531,
+                "99.999" : 3608.355034111531,
+                "99.9999" : 3608.355034111531,
+                "100.0" : 3608.355034111531
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    3607.774359891846,
+                    3493.752969320284,
+                    3581.433475306728
+                ],
+                [
+                    3182.8634883088826,
+                    3194.527042783533,
+                    3201.957043628565
+                ],
+                [
+                    3419.428181468824,
+                    3412.861974645396,
+                    3206.2966009703455
+                ],
+                [
+                    3608.355034111531,
+                    3574.500134755763,
+                    3472.5742212613395
+                ],
+                [
+                    3551.608394191172,
+                    3322.61950162312,
+                    3583.5129766539194
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "mil.teng.sobes03.bench.MusicLargeTest.viaEachMapB",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 5,
+        "jvm" : "C:\\SpecTools\\jdk-17.0.10x64\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8"
+        ],
+        "jdkVersion" : "17.0.10",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "17.0.10+11-LTS-240",
+        "warmupIterations" : 3,
+        "warmupTime" : "5 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "maxMelody" : "20000000"
+        },
+        "primaryMetric" : {
+            "score" : 6.043233719866667E9,
+            "scoreError" : 3.719344518845755E8,
+            "scoreConfidence" : [
+                5.671299267982091E9,
+                6.415168171751243E9
+            ],
+            "scorePercentiles" : {
+                "0.0" : 5.5762873E9,
+                "50.0" : 6.032186999E9,
+                "90.0" : 6.629294940400001E9,
+                "95.0" : 6.844312501E9,
+                "99.0" : 6.844312501E9,
+                "99.9" : 6.844312501E9,
+                "99.99" : 6.844312501E9,
+                "99.999" : 6.844312501E9,
+                "99.9999" : 6.844312501E9,
+                "100.0" : 6.844312501E9
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    6.032186999E9,
+                    6.305178399E9,
+                    6.321621399E9
+                ],
+                [
+                    6.844312501E9,
+                    6.2416917E9,
+                    6.0393079E9
+                ],
+                [
+                    5.8704227E9,
+                    6.0776994E9,
+                    5.9445648E9
+                ],
+                [
+                    5.5762873E9,
+                    5.6717697E9,
+                    5.6682214E9
+                ],
+                [
+                    5.7820787E9,
+                    6.4859499E9,
+                    5.787213E9
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "mil.teng.sobes03.bench.MusicLargeTest.viaForMap",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 5,
+        "jvm" : "C:\\SpecTools\\jdk-17.0.10x64\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8"
+        ],
+        "jdkVersion" : "17.0.10",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "17.0.10+11-LTS-240",
+        "warmupIterations" : 3,
+        "warmupTime" : "5 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "maxMelody" : "200"
+        },
+        "primaryMetric" : {
+            "score" : 3161.054297963752,
+            "scoreError" : 99.46700345059469,
+            "scoreConfidence" : [
+                3061.5872945131573,
+                3260.521301414347
+            ],
+            "scorePercentiles" : {
+                "0.0" : 3006.042985859693,
+                "50.0" : 3165.2084030921983,
+                "90.0" : 3295.742602116354,
+                "95.0" : 3306.3229171281237,
+                "99.0" : 3306.3229171281237,
+                "99.9" : 3306.3229171281237,
+                "99.99" : 3306.3229171281237,
+                "99.999" : 3306.3229171281237,
+                "99.9999" : 3306.3229171281237,
+                "100.0" : 3306.3229171281237
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    3306.3229171281237,
+                    3288.6890587751745,
+                    3267.4111048889454
+                ],
+                [
+                    3128.84049448212,
+                    3165.2084030921983,
+                    3241.203986671342
+                ],
+                [
+                    3087.765491150912,
+                    3093.294402219593,
+                    3031.321037451399
+                ],
+                [
+                    3006.042985859693,
+                    3202.115927201861,
+                    3089.9531833991064
+                ],
+                [
+                    3107.693129886739,
+                    3227.9869363998405,
+                    3171.9654108492227
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "mil.teng.sobes03.bench.MusicLargeTest.viaForMap",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 5,
+        "jvm" : "C:\\SpecTools\\jdk-17.0.10x64\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8"
+        ],
+        "jdkVersion" : "17.0.10",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "17.0.10+11-LTS-240",
+        "warmupIterations" : 3,
+        "warmupTime" : "5 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "maxMelody" : "20000000"
+        },
+        "primaryMetric" : {
+            "score" : 5.774491376666667E9,
+            "scoreError" : 5.401344659276984E8,
+            "scoreConfidence" : [
+                5.234356910738969E9,
+                6.314625842594365E9
+            ],
+            "scorePercentiles" : {
+                "0.0" : 4.35461875E9,
+                "50.0" : 5.8643331E9,
+                "90.0" : 6.234796E9,
+                "95.0" : 6.3072331E9,
+                "99.0" : 6.3072331E9,
+                "99.9" : 6.3072331E9,
+                "99.99" : 6.3072331E9,
+                "99.999" : 6.3072331E9,
+                "99.9999" : 6.3072331E9,
+                "100.0" : 6.3072331E9
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    5.0983665E9,
+                    4.35461875E9,
+                    5.4044124E9
+                ],
+                [
+                    6.019648E9,
+                    5.7359168E9,
+                    5.8643331E9
+                ],
+                [
+                    5.6590505E9,
+                    6.0243649E9,
+                    5.7838417E9
+                ],
+                [
+                    5.8615559E9,
+                    5.9710657E9,
+                    6.1865046E9
+                ],
+                [
+                    6.3072331E9,
+                    6.1600695E9,
+                    6.1863892E9
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "mil.teng.sobes03.bench.MusicLargeTest.viaStreamGroupA",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 5,
+        "jvm" : "C:\\SpecTools\\jdk-17.0.10x64\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8"
+        ],
+        "jdkVersion" : "17.0.10",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "17.0.10+11-LTS-240",
+        "warmupIterations" : 3,
+        "warmupTime" : "5 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "maxMelody" : "200"
+        },
+        "primaryMetric" : {
+            "score" : 3822.791806229966,
+            "scoreError" : 110.78085009527368,
+            "scoreConfidence" : [
+                3712.010956134692,
+                3933.5726563252397
+            ],
+            "scorePercentiles" : {
+                "0.0" : 3677.7392006518808,
+                "50.0" : 3819.25150885147,
+                "90.0" : 3973.4998221926517,
+                "95.0" : 3975.7479493698256,
+                "99.0" : 3975.7479493698256,
+                "99.9" : 3975.7479493698256,
+                "99.99" : 3975.7479493698256,
+                "99.999" : 3975.7479493698256,
+                "99.9999" : 3975.7479493698256,
+                "100.0" : 3975.7479493698256
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    3962.9302099652054,
+                    3975.7479493698256,
+                    3907.5419293394825
+                ],
+                [
+                    3825.798669566075,
+                    3878.9382908300167,
+                    3893.841101828518
+                ],
+                [
+                    3755.856671916862,
+                    3765.0323021582194,
+                    3972.0010707412025
+                ],
+                [
+                    3706.990487599483,
+                    3677.7392006518808,
+                    3771.290198532683
+                ],
+                [
+                    3689.5699224641467,
+                    3739.34757963441,
+                    3819.25150885147
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "mil.teng.sobes03.bench.MusicLargeTest.viaStreamGroupA",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 5,
+        "jvm" : "C:\\SpecTools\\jdk-17.0.10x64\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8"
+        ],
+        "jdkVersion" : "17.0.10",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "17.0.10+11-LTS-240",
+        "warmupIterations" : 3,
+        "warmupTime" : "5 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "maxMelody" : "20000000"
+        },
+        "primaryMetric" : {
+            "score" : 6.2204546E9,
+            "scoreError" : 3.5272701877522886E8,
+            "scoreConfidence" : [
+                5.8677275812247715E9,
+                6.5731816187752285E9
+            ],
+            "scorePercentiles" : {
+                "0.0" : 5.6815018E9,
+                "50.0" : 6.262446E9,
+                "90.0" : 6.71821226E9,
+                "95.0" : 6.7898984E9,
+                "99.0" : 6.7898984E9,
+                "99.9" : 6.7898984E9,
+                "99.99" : 6.7898984E9,
+                "99.999" : 6.7898984E9,
+                "99.9999" : 6.7898984E9,
+                "100.0" : 6.7898984E9
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    6.262446E9,
+                    6.6377138E9,
+                    5.9722421E9
+                ],
+                [
+                    6.331691E9,
+                    5.6815018E9,
+                    6.1687096E9
+                ],
+                [
+                    6.3549928E9,
+                    6.7898984E9,
+                    6.2827837E9
+                ],
+                [
+                    6.0551804E9,
+                    6.4103016E9,
+                    6.6704215E9
+                ],
+                [
+                    6.0073213E9,
+                    5.9736371E9,
+                    5.7079779E9
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "mil.teng.sobes03.bench.MusicLargeTest.viaStreamGroupB",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 5,
+        "jvm" : "C:\\SpecTools\\jdk-17.0.10x64\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8"
+        ],
+        "jdkVersion" : "17.0.10",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "17.0.10+11-LTS-240",
+        "warmupIterations" : 3,
+        "warmupTime" : "5 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "maxMelody" : "200"
+        },
+        "primaryMetric" : {
+            "score" : 37915.28029153423,
+            "scoreError" : 1632.9047952210965,
+            "scoreConfidence" : [
+                36282.375496313136,
+                39548.18508675533
+            ],
+            "scorePercentiles" : {
+                "0.0" : 36798.46598684501,
+                "50.0" : 37377.74231404588,
+                "90.0" : 40660.36023837285,
+                "95.0" : 42591.23624408027,
+                "99.0" : 42591.23624408027,
+                "99.9" : 42591.23624408027,
+                "99.99" : 42591.23624408027,
+                "99.999" : 42591.23624408027,
+                "99.9999" : 42591.23624408027,
+                "100.0" : 42591.23624408027
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    36883.19064368884,
+                    37001.67162456156,
+                    36824.08026509573
+                ],
+                [
+                    37707.8232215838,
+                    37193.13083834117,
+                    38065.47037425993
+                ],
+                [
+                    36798.46598684501,
+                    38193.42081143835,
+                    38183.056270378824
+                ],
+                [
+                    37377.74231404588,
+                    36841.30196170874,
+                    36811.701235040404
+                ],
+                [
+                    42591.23624408027,
+                    39373.109567901236,
+                    38883.80301404376
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "mil.teng.sobes03.bench.MusicLargeTest.viaStreamGroupB",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 5,
+        "jvm" : "C:\\SpecTools\\jdk-17.0.10x64\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dfile.encoding=UTF-8"
+        ],
+        "jdkVersion" : "17.0.10",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "17.0.10+11-LTS-240",
+        "warmupIterations" : 3,
+        "warmupTime" : "5 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "maxMelody" : "20000000"
+        },
+        "primaryMetric" : {
+            "score" : 6.273934556666667E9,
+            "scoreError" : 7.865748065237627E8,
+            "scoreConfidence" : [
+                5.487359750142904E9,
+                7.06050936319043E9
+            ],
+            "scorePercentiles" : {
+                "0.0" : 5.1408729E9,
+                "50.0" : 6.2792331E9,
+                "90.0" : 7.55527694E9,
+                "95.0" : 7.6103111E9,
+                "99.0" : 7.6103111E9,
+                "99.9" : 7.6103111E9,
+                "99.99" : 7.6103111E9,
+                "99.999" : 7.6103111E9,
+                "99.9999" : 7.6103111E9,
+                "100.0" : 7.6103111E9
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    6.7578263E9,
+                    6.1949892E9,
+                    6.5231995E9
+                ],
+                [
+                    6.5076735E9,
+                    6.3838535E9,
+                    7.5185875E9
+                ],
+                [
+                    7.6103111E9,
+                    6.8868881E9,
+                    5.9335903E9
+                ],
+                [
+                    5.1408729E9,
+                    5.16728285E9,
+                    5.7659753E9
+                ],
+                [
+                    5.7454742E9,
+                    6.2792331E9,
+                    5.693261E9
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

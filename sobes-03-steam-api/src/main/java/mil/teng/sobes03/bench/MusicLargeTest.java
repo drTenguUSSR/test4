@@ -20,18 +20,36 @@ import org.openjdk.jmh.infra.Blackhole;
 
 /**
  * @author DrTengu, 2024/06
+ *
+ * \@Fork(value = 5, jvmArgs = { "-Xms6G", "-Xmx6G" })
+ * \@Warmup(iterations = 10, time = 40, timeUnit = TimeUnit.SECONDS)
+ * \@Measurement(iterations = 10, time = 40, timeUnit = TimeUnit.SECONDS)
+ * \@Param({ "2000" })
+ * => ETA 05:33:20
+ *
+ * \@Fork(value = 5, jvmArgs = { "-Xms6G", "-Xmx6G" })
+ * \@Warmup(iterations = 10, time = 20, timeUnit = TimeUnit.SECONDS)
+ * \@Measurement(iterations = 10, time = 20, timeUnit = TimeUnit.SECONDS)
+ * \@Param({ "20000" })
+ * => ETA 02:46:40
  */
 
 @BenchmarkMode(Mode.AverageTime)
 @Fork(value = 5, jvmArgs = { "-Xms6G", "-Xmx6G" })
-@Warmup(iterations = 3, time = 5, timeUnit = TimeUnit.SECONDS)
-@Measurement(iterations = 3, time = 5, timeUnit = TimeUnit.SECONDS)
+@Warmup(iterations = 10, time = 20, timeUnit = TimeUnit.SECONDS)
+@Measurement(iterations = 10, time = 20, timeUnit = TimeUnit.SECONDS)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 public class MusicLargeTest {
 
     @Benchmark
-    public void viaSteam(Blackhole blackhole, BenchParam param) {
-        final var resA = SortAlgorithms.makeSortViaStreamGroup(param.allMusic);
+    public void viaStreamGroupA(Blackhole blackhole, BenchParam param) {
+        final var resA = SortAlgorithms.makeSortViaStreamGroupA(param.allMusic);
+        blackhole.consume(resA);
+    }
+
+    @Benchmark
+    public void viaStreamGroupB(Blackhole blackhole, BenchParam param) {
+        final var resA = SortAlgorithms.makeSortViaStreamGroupB(param.allMusic);
         blackhole.consume(resA);
     }
 
@@ -47,12 +65,21 @@ public class MusicLargeTest {
         blackhole.consume(resA);
     }
 
+    @Benchmark
+    public void viaForMap(Blackhole blackhole, BenchParam param) {
+        final var resA = SortAlgorithms.makeSortViaForMap(param.allMusic);
+        blackhole.consume(resA);
+    }
+
     @State(Scope.Benchmark)
     public static class BenchParam {
         List<Music> allMusic;
 
-        @Param({ "200", "2000", "20000", "200000", "2000000" })
+        //@Param({ "200", "2000", "20000", "200000", "2000000" })
         //@Param({ "200", "2000000" })
+        //@Param({ "200", "2000", "20000", "200000", "2000000","20000000" })
+        //max checked - "20 000 000"
+        @Param({ "20000" })
         public int maxMelody;
 
         @Setup(Level.Iteration)
