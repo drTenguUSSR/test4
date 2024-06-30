@@ -12,7 +12,8 @@
 
 ## вывод
 
-при больших объемах данных и простом алгоритме обработки, использование Stream замедляет работу
+при больших объемах данных и простом алгоритме обработки, использование
+Stream замедляет работу.
 
 ## <a id="sort-algorithms" />алгоритмы реализации
 
@@ -76,7 +77,6 @@ public final class Music {
 - maxMelody=200,20000000
 - total-time=00:53:41
 
-
 ![MusicLargeTest-20kk.png](reports/MusicLargeTest-20kk.png)
 
 для 20'000'000 элементов
@@ -107,14 +107,14 @@ public final class Music {
 
 ### MusicLargeTest-B
 
-# Warmup: 7 iterations, 30 s each
-# Measurement: 7 iterations, 30 s each
+- Warmup: 7 iterations, 30 s each
+- Measurement: 7 iterations, 30 s each
 - maxMelody=200'000
 - total-time=02:55:42
 
 ![MusicLargeTest-B.png](reports/MusicLargeTest-B.png)
 
-самый быстрый алгоритм - viaEachMapB. 15,86 ms 
+самый быстрый алгоритм - viaEachMapB. 15,86 ms
 
 самый медленный алгоритм - viaStreamGroupB, 23,36 ms
 
