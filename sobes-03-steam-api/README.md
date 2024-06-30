@@ -2,16 +2,18 @@
 
 ## Формулировка задачи
 
-дан список элементов Music(см.класс mil.teng.sobes03.music.Music, см. #dataClassMusic) - каждый
+дан список элементов Music(см.класс mil.teng.sobes03.music.Music) - каждый
 элемент содержит:
 
 - author - имя автора
 
 - name - название мелодии
 
+см. [код класса](#data-class-music)
+
 ## алгоритмы реализации
 
-## [dataClassMusic] класс Music
+## <a id="data-class-music" /> класс Music
 
 ```java
 public final class Music {
