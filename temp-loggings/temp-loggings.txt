@@ -1,0 +1,68 @@
+Group       : mil.teng.q2024a.temp
+Artifact    : test-logging-log4j
+Description : test project for sping logging via YAML
+Package name: mil.teng.q2024a.temp.test4logging
+---------------------------------------------------------------------
+depends
++lombok
++Spring Web
++Spring Boot Actuator
++Thymeleaf 
++Spring for Apache Kafka
++codecentric's Spring Boot Admin (Client)/ spring-boot-admin-started-client
++codecentric's Spring Boot Admin (Server)/ spring-boot-admin-started-server
+====================================================================== ERR-01 skip
+using: Spring Boot/How-to Guides/Logging
+https://docs.spring.io/spring-boot/how-to/logging.html
+(to-do: 'Use YAML or JSON to Configure Log4j 2')
+
+result:
+java.lang.IllegalArgumentException: LoggerFactory is not a Logback LoggerContext but Logback is on the classpath. 
+Either remove Logback or the competing implementation (class org.apache.logging.slf4j.Log4jLoggerFactory loaded from 
+file:/D:/MyDocs-Maven-Repo1/org/apache/logging/log4j/log4j-slf4j2-impl/2.23.1/log4j-slf4j2-impl-2.23.1.jar). 
+If you are using WebLogic you will need to add 'org.slf4j' to prefer-application-packages 
+in WEB-INF/weblogic.xml: org.apache.logging.slf4j.Log4jLoggerFactory
+
+cook:
+https://stackoverflow.com/questions/30792268/loggerfactory-is-not-a-logback-loggercontext-but-logback-is-on-the-classpath
+for module spring-boot-starter-thymeleaf add 
+---
+    <exclusions>
+        <exclusion>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </exclusion>
+    </exclusions>
+---
+???
+configurations {
+    all {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+        exclude group: 'ch.qos.logback', module: 'logback-classic'
+        exclude group: 'org.apache.logging.log4j', module: 'log4j-to-slf4j'
+    }
+}
+============================================================== ERR-02
+2024-08-04T20:13:54.312168500Z main ERROR 
+Unknown object "root" of type org.apache.logging.log4j.core.config.LoggerConfig is ignored: 
+try nesting it inside one of: ["Appenders", "Loggers", "Properties", "Scripts", "CustomLevels"].
+
+wromg log4j2.xml - "<Configuration>", .... "<Root>"
+============================================================== ERR-03
+couldn't determine local port ...spring.boot.admin.client.instance.service-base-url
+
+src\main\resources\application.properties:
+	spring.boot.admin.client.instance.service-base-url=http://localhost:9020
+================================
+config admin client
+https://www.baeldung.com/spring-boot-admin
+================================
+show listening ports
+as admin run: netstat -abno
+================================x0003
+admin cliend. define parameters (user,password,...)
+https://stackoverflow.com/questions/76246935/why-admin-client-throw-the-error-couldnt-determine-local-port
+
+
+https://www.baeldung.com/spring-boot-admin
+https://docs.spring-boot-admin.com/current/getting-started.html#register-client-applications
