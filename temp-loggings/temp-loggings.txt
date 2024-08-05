@@ -47,7 +47,7 @@ configurations {
 Unknown object "root" of type org.apache.logging.log4j.core.config.LoggerConfig is ignored: 
 try nesting it inside one of: ["Appenders", "Loggers", "Properties", "Scripts", "CustomLevels"].
 
-wromg log4j2.xml - "<Configuration>", .... "<Root>"
+wrong log4j2.xml -  correct tag name "<Configuration>", .... "<Root>"
 ============================================================== ERR-03
 couldn't determine local port ...spring.boot.admin.client.instance.service-base-url
 

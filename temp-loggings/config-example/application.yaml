@@ -32,7 +32,7 @@ spring:
 #            password: 777
 
 logging:
-    config: "config/log4j2-551.xml"
+    config: "config/log4j2-552.yaml"
 
 sedSvc:
     simpleDebug: true

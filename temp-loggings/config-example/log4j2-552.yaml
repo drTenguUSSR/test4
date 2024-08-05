@@ -16,7 +16,7 @@ Configuration:
 
         File:
             name: File_Appender
-            fileName: ${log-path}/logfile-config-1.log
+            fileName: ${log-path}/log-main.log
             PatternLayout:
                 pattern: ${log_pattern}
 

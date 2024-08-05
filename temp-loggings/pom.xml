@@ -35,6 +35,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
 <!--
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -42,7 +47,7 @@
 		</dependency>
 -->
 		
-		<!-- log4j beg. https://docs.spring.io/spring-boot/how-to/logging.html -->
+		<!-- log4j2 beg. https://docs.spring.io/spring-boot/how-to/logging.html -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -61,7 +66,18 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-log4j2</artifactId>
 		</dependency>
-		<!-- log4j end -->
+		<!-- exteng logger config via yaml -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-yaml</artifactId>
+			<version>2.16.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.16.2</version>
+		</dependency>
+		<!-- log4j2 end -->
 
 		<dependency>
 			<groupId>de.codecentric</groupId>
