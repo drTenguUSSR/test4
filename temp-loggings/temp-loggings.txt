@@ -66,3 +66,7 @@ https://stackoverflow.com/questions/76246935/why-admin-client-throw-the-error-co
 
 https://www.baeldung.com/spring-boot-admin
 https://docs.spring-boot-admin.com/current/getting-started.html#register-client-applications
+=============================
+Учебник по Spring Boot Admin
+https://habr.com/ru/articles/479954/
+https://www.vojtechruzicka.com/spring-boot-admin/
