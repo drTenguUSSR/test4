@@ -19,6 +19,6 @@
 
 На свой issue 2 "featere/0212 создание файла F0212.txt"
 
-1. short.  #2
-2. medium. drTenguUSSR/test4#2
-3. long.  drTenguUSSR/test4/issues/2
+1. short. не работает в markdown, работает в тексте коммита - #2
+2. medium. работает в markdown и в тексте коммита - drTenguUSSR/test4#2
+3. long.  работает в markdown и в тексте коммита - drTenguUSSR/test4/issues/2
